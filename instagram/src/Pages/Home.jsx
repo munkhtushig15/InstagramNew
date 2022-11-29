@@ -4,16 +4,11 @@ import Users from "./Users";
 import Posts from "./Posts";
 import axios from "axios";
 import "../App.css";
-const Home = () => {
-  const styles = {
-    hidden: {
-      width: 0,
-    },
-    block: {
-      width: 100,
-    },
-  };
 
+const menuStyle = document.querySelectorAll(".menus");
+const searchInputStyle = document.querySelectorAll(".srchInput");
+
+const Home = () => {
   // false === 'hidden'
   // true === 'block'
   const [data, setData] = useState([]);
@@ -35,28 +30,33 @@ const Home = () => {
     console.log(response.data.posts);
     setPost(response.data.posts);
   };
+
+  let expanded = false;
   const searchHandler = () => {
-    if (isInput === false) {
-      setIsInput(true);
-    } else {
-      setIsInput(false);
+    if (expanded === false) {
+      menuStyle.style.animation = "expand 1s linear infinite";
+      expanded = true;
+      console.log(expanded);
+    } else if (expanded === true) {
+      menuStyle.style.animation = "dexpand 1s linear infinite";
+      expanded = false;
+      console.log(expanded);
     }
   };
+
   useEffect(() => {
     getData();
     getPost();
   }, []);
+
   return (
     <div className="bigContainer">
       <div className="sideBars">
-        <div className="menus" style={isInput ? styles.block : styles.hidden}>
+        <div className="menus">
           <Button onClick={getData}>Home</Button>
           <Button onClick={searchHandler}>Search</Button>
         </div>
-        <div
-          className="srchInput"
-          style={isInput ? styles.hidden : styles.block}
-        >
+        <div className="srchInput">
           <input type="text" />
         </div>
       </div>

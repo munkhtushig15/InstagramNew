@@ -24,3 +24,32 @@
 .srchInput {
   width: 0;
 }
+.menus {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@keyframes expand {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes dexpand {
+  0% {
+    background-color: purple;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
