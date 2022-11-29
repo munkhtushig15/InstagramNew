@@ -4,7 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home";
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter style={{ margin: 0 }}>
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
