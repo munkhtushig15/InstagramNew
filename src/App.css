@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes expand {
+  0% {
+    background-color: black;
+  }
+  50% {
+    background-color: aqua;
+  }
+  100% {
+    background-color: red;
+  }
+}
+
+@keyframes dexpand {
+  0% {
+    background-color: purple;
+  }
+  50% {
+    background-color: blue;
+  }
+  100% {
+    background-color: green;
+  }
+}
+
+/* HOME page style START here =>>  */
+
+.homePageContainer {
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+}
+.menu {
+  width: 16%;
+  height: 100vh;
+}
+.main {
+  width: 84%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.bigBox {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+}
+.mainOne {
+  width: 65%;
+}
+.usersContainer {
+  
+}
+.userContainer {
+  width: 80px;
+  border-radius: 50%;
+}
+.mainTwo {
+  width: 30%;
+}
+.userProfile {
+  width: 60px;
+  background: linear-gradient(white, white) padding-box,
+  linear-gradient(to bottom left, #6600ff, #ff9900) border-box;
+  border-radius: 50em;
+  border: 3px solid transparent;
+
+}
+.userUsername {
+  display: flex;
+}
+.users {
+  display: flex;
+  overflow-x: scroll;
+}
+
+/* HOME page style END */
