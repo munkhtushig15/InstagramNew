@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Users from "./Users";
+import Loading from "../Components/Loading";
 import Posts from "./Posts";
 import axios from "axios";
 import "../App.css";
