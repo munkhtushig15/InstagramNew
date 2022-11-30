@@ -6,14 +6,17 @@ const Posts = ({ post }) => {
       <Container>
         <Card
           style={{
-            width: "18rem",
-            backgroundColor: "blue",
+            width: "800px",
+            backgroundColor: "white",
             borderColor: "white",
           }}
         >
-          <Card.Img></Card.Img>
           <Card.Body>
             <Card.Title>
+              <img
+                src="http://resource4.sodonsolution.org/elselt/image/2020/05/21/qoddp00369cjpgb3/38735659_1860724667341479_9080045546508386304_o_s.png"
+                alt=""
+              />
               <p>Title : {post.title}</p>
             </Card.Title>
           </Card.Body>

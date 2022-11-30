@@ -5,6 +5,9 @@
 
 .Users {
   overflow-x: scroll;
+  height: 170px;
+  width: 739px;
+  border: 1px solid gray;
 }
 .bigContainer {
   margin: 0;
@@ -17,9 +20,14 @@
   display: flex;
   flex-direction: column;
   margin: 0 1% 0 1%;
+  border: 1px solid gray;
+  margin-left: 0px;
 }
 .main {
-  width: 80%;
+  width: 50%;
+  background-color: #fafafa;
+  margin-left: 300px;
+  margin-top: 50px;
 }
 .srchInput {
   width: 0;

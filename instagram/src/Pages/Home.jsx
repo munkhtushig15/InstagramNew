@@ -53,8 +53,50 @@ const Home = () => {
     <div className="bigContainer">
       <div className="sideBars">
         <div className="menus">
-          <Button onClick={getData}>Home</Button>
-          <Button onClick={searchHandler}>Search</Button>
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1280px-Instagram_logo.svg.png"
+            alt=""
+          />
+          <Button
+            onClick={getData}
+            style={{
+              backgroundColor: "white",
+              color: "black",
+              borderRadius: "100px",
+              width: "300px",
+              height: "50px",
+              fontFamily: "rockwell",
+              fontSize: "30px",
+              border: "1px solid white",
+            }}
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
+              alt=""
+              style={{ width: "26px", height: "26px" }}
+            />
+            Home
+          </Button>
+          <Button
+            onClick={searchHandler}
+            style={{
+              backgroundColor: "white",
+              color: "black",
+              borderRadius: "100px",
+              width: "300px",
+              height: "50px",
+              fontFamily: "rockwell",
+              fontSize: "30px",
+              border: "1px solid white",
+            }}
+          >
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/149/149852.png"
+              alt=""
+              style={{ width: "26px", height: "26px" }}
+            />
+            Search
+          </Button>
         </div>
         <div className="srchInput">
           <input type="text" />

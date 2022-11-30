@@ -6,14 +6,26 @@ const Users = ({ user }) => {
       <Container>
         <Card
           style={{
-            width: "18rem",
-            backgroundColor: "red",
+            width: "120px",
+            backgroundColor: "darkwhite",
             borderColor: "white",
           }}
         >
           <Card.Body>
             <Card.Title>
-              <p>FirstName : {user.firstName}</p>
+              <img
+                src={user.image}
+                alt=""
+                style={{
+                  width: "80px",
+                  height: "80px",
+                  border: "3px solid pink",
+                  borderRadius: "100%",
+                }}
+                p
+              />
+
+              <p style={{ fontFamily: "Rockwell" }}>{user.maidenName}</p>
             </Card.Title>
           </Card.Body>
         </Card>
