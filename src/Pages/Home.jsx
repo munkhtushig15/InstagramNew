@@ -1,17 +1,12 @@
 import { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import Users from "./Users";
-import Loading from "../Components/Loading";
 import Posts from "./Posts";
 import axios from "axios";
 import "../App.css";
-
-const menuStyle = document.querySelectorAll(".menus");
-const searchInputStyle = document.querySelectorAll(".srchInput");
+import Loading from "../Components/Loading";
 
 const Home = () => {
-  // false === 'hidden'
-  // true === 'block'
   const [data, setData] = useState([]);
   const [post, setPost] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -36,19 +31,6 @@ const Home = () => {
     setIsLoading(false);
   };
 
-  let expanded = false;
-  const searchHandler = () => {
-    if (expanded === false) {
-      menuStyle.style.animation = "expand 1s linear infinite";
-      expanded = true;
-      console.log(expanded);
-    } else if (expanded === true) {
-      menuStyle.style.animation = "dexpand 1s linear infinite";
-      expanded = false;
-      console.log(expanded);
-    }
-  };
-
   useEffect(() => {
     getData();
     getPost();
@@ -59,57 +41,32 @@ const Home = () => {
       {isLoading ? (
         <Loading />
       ) : (
-        <div className="homePageContainer">
-          <div className="menu">
-            <div className="sideBars">
-              <Button onClick={getData}>Home</Button>
-              <Button onClick={searchHandler}>Search</Button>
-            </div>
-            <div className="srchInput">
-              <input type="text" />
-            </div>
-          </div>
-
+        <div className="bigContainer">
           <div className="main">
-            <div className="bigBox">
-              <div className="mainOne">
-                <div className="usersContainer">
-                  <div className="users">
-                    {data &&
-                      data.map((user, id) => {
-                        return (
-                          <div>
-                            <Users key={id} user={user} />
-                          </div>
-                        );
-                      })}
-                  </div>
-                </div>
-                <div className="postsContainer">
-                  <div className="posts">
-                    {post &&
-                      post.map((post, id) => {
-                        return (
-                          <div>
-                            <Posts key={id} post={post} />
-                          </div>
-                        );
-                      })}
-                  </div>
-                </div>
-              </div>
-              <div className="mainTwo">
-
-              </div>
+            <div className="Users rounded-5" style={{ display: "flex" }}>
+              {data &&
+                data.map((user, id) => {
+                  return (
+                    <div>
+                      <Users key={id} user={user} />
+                    </div>
+                  );
+                })}
             </div>
-            
-            
+            <div>
+              {post &&
+                post.map((post, id) => {
+                  return (
+                    <div>
+                      <Posts key={id} post={post} />
+                    </div>
+                  );
+                })}
+            </div>
           </div>
         </div>
       )}
     </>
-
-    
   );
 };
 export default Home;
