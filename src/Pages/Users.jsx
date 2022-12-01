@@ -20,17 +20,7 @@ const Users = ({ user }) => {
           >
             <Card.Body>
               <Card.Title>
-                <img
-                  src={user.image}
-                  alt=""
-                  style={{
-                    width: "80px",
-                    height: "80px",
-                    border: "3px solid pink",
-                    borderRadius: "100%",
-                  }}
-                  p
-                />
+                <img className="userProfile" src={user.image} alt="" />
 
                 <center>
                   <p

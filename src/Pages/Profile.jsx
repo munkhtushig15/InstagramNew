@@ -13,6 +13,17 @@ const Profile = () => {
   useEffect(() => {
     getDataById(params.id);
   }, []);
-  return <div>{data && <div>{data.firstName}</div>}</div>;
+  return (
+    <div>
+      {data && (
+        <div className="userProfileMun">
+          <p>{data.firstName}</p>
+          <p>{data.lastName}</p>
+          <p>{data.maidenName}</p>
+          <p>{data.age}</p>
+        </div>
+      )}
+    </div>
+  );
 };
 export default Profile;
