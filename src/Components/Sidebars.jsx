@@ -106,7 +106,9 @@ const Sidebars = () => {
                   alt=""
                   style={{ width: "50px", height: "50px" }}
                 />
-                {!expanded && "Search"}
+                <div style={{ marginTop: "5px" }}>
+                  &nbsp;{!expanded && "Search"}
+                </div>
               </Button>
             </div>
           </div>
