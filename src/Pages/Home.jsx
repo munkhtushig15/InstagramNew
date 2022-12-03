@@ -42,13 +42,13 @@ const Home = () => {
       ) : (
         <div className="bigContainer">
           <div className="main">
-            <div className="Users rounded-5" style={{ display: "flex" }}>
+            <div className="Users">
               {data &&
                 data.map((user, index) => {
                   return <Users key={index} user={user} />;
                 })}
             </div>
-            <div>
+            <div className="bigPostContainer">
               {post &&
                 post.map((post, id) => {
                   return (
@@ -58,6 +58,9 @@ const Home = () => {
                   );
                 })}
             </div>
+          </div>
+          <div className="suggestYou">
+            
           </div>
         </div>
       )}

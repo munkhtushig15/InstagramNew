@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.postContainer {
+    width: 95%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+.posterProfile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(white, white) padding-box,
+    linear-gradient(to bottom left, #6600ff, #ff9900) border-box;
+    border: 3px solid transparent;
+    margin: 10px ;
+
+}
+.posterName {
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
