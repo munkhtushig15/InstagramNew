@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
 import Users from "./Users";
 import Posts from "./Posts";
 import axios from "axios";
@@ -45,12 +44,8 @@ const Home = () => {
           <div className="main">
             <div className="Users rounded-5" style={{ display: "flex" }}>
               {data &&
-                data.map((user, id) => {
-                  return (
-                    <div>
-                      <Users key={id} user={user} />
-                    </div>
-                  );
+                data.map((user, el, index) => {
+                  return <Users key={index} user={user} />;
                 })}
             </div>
             <div>

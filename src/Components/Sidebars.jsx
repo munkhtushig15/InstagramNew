@@ -4,12 +4,13 @@ import "../App.css";
 import axios from "axios";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
-import Home from "../Pages/Home";
-
+import Users from "../Pages/Users";
+import "bootstrap/dist/css/bootstrap.min.css";
 const Sidebars = () => {
   const [expanded, setExpanded] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [data, setData] = useState([]);
+  const [value, setValue] = useState("");
 
   const instance = axios.create({
     baseURL: "https://dummyjson.com/",
@@ -19,11 +20,16 @@ const Sidebars = () => {
   });
   const getData = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/users");
+    const response = await instance.get(`https://dummyjson.com/users/`);
     console.log(response.data.users);
     setData(response.data.users);
     setIsLoading(false);
   };
+  // const getDataById = async () => {
+  //   const response = await instance.get(`https://dummyjson.com/users/`);
+  //   setData([response.data.users]);
+  //   console.log(response);
+  // };
 
   useEffect(() => {
     getData();
@@ -343,27 +349,39 @@ const Sidebars = () => {
               Search{" "}
             </p>
             <div>
-              <input
-                type="search"
-                style={{
-                  width: "400px",
-                  height: "50px",
-                  borderRadius: "100px",
-                  marginLeft: "20px",
-                }}
-              />
-              <button
-                style={{
-                  width: "70px",
-                  height: "50px",
-                  background: "#F3EFE0",
-                  color: "black",
-                  border: "1px solid white",
-                  borderRadius: "100px",
-                }}
+              <div
+                class="active-pink-3 active-pink-4 mb-4 rounded-5"
+                style={{ display: "flex" }}
               >
-                GET
-              </button>
+                <input
+                  onChange={(e) => setValue(e.target.value)}
+                  class="form-control"
+                  type="text"
+                  placeholder="Search"
+                  aria-label="Search"
+                />
+                <Button
+                  style={{
+                    backgroundColor: "white",
+                    border: "2px solid purple",
+                    color: "black",
+                  }}
+                  onClick={getData}
+                >
+                  GET
+                </Button>
+              </div>
+
+              <div className="a">
+                {data &&
+                  data.map((el, index) => {
+                    return (
+                      el.maidenName.includes(value) && (
+                        <Users key={index} user={el} />
+                      )
+                    );
+                  })}
+              </div>
             </div>
           </div>
         </div>

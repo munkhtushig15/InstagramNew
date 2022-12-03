@@ -17,10 +17,12 @@ const Profile = () => {
     <div>
       {data && (
         <div className="userProfileMun">
-          <p>{data.firstName}</p>
-          <p>{data.lastName}</p>
-          <p>{data.maidenName}</p>
-          <p>{data.age}</p>
+          <center>
+            <p>{data.firstName}</p>
+            <p>{data.lastName}</p>
+            <p>{data.maidenName}</p>
+            <p>{data.age}</p>
+          </center>
         </div>
       )}
     </div>
