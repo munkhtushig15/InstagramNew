@@ -44,7 +44,7 @@ const Home = () => {
           <div className="main">
             <div className="Users rounded-5" style={{ display: "flex" }}>
               {data &&
-                data.map((user, el, index) => {
+                data.map((user, index) => {
                   return <Users key={index} user={user} />;
                 })}
             </div>
