@@ -56,7 +56,7 @@ const Posts = ({ post }) => {
           <img
             className="postIcons"
             src="https://cdn-icons-png.flaticon.com/512/927/927567.png"
-            alt=""
+            alt="#"
           />
           <input className="postCommentInput" type="text" placeholder="Add a comment ..." />
         </div>

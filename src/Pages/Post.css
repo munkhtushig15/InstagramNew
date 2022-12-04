@@ -91,8 +91,12 @@
   justify-content: center;
 }
 .postCommentInput {
-  border: 0;
-  
+  border: 0; 
+}
+#postColor {
+  font-weight: bold;
+  color: #0089B6;
+  opacity: 0.5;
 }
 
 

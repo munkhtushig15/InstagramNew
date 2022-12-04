@@ -4,6 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Home from "./Pages/Home";
 import Profile from "./Pages/Profile";
 import Sidebars from "./Components/Sidebars";
+
 const App = () => {
   return (
     <BrowserRouter style={{ margin: 0 }}>
