@@ -1,0 +1,69 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+:root {
+    background-color: #fafafa;
+}
+.profileContainer {
+    width: 88%;
+    height: fit-content;
+    margin-left: 12%;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    background-color: #fafafa;
+}
+.mainContainer {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+.partOne {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.partTwo {
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.zuragProfile {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 1px solid rgba(86, 86, 86, 0.792) ;
+}
+.zurag {
+    width: 18px;
+}
+.aaaa {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.aaaa span {
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.aaaa button {
+    border: 0;
+    border-radius: 5px;
+    padding: 5px 15px;
+}
+.aaaa button:hover {
+    background-color: gainsboro;
+}
+.aaab {
+    display: flex;
+    gap: 50px;
+}
