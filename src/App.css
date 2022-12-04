@@ -9,11 +9,13 @@
   height: auto;
   justify-content: center;
   padding-left: 12%;
+  margin-top: 30px ;
 }
 .main {
   width: 35%;
   display: flex;
   flex-direction: column;
+  gap: 20px;
 } 
 .suggestYou {
   width: 15%;
@@ -21,14 +23,15 @@
 .Users {
   display: flex;
   overflow-x: scroll;
-  border: 1px solid gray;
+  border: 1px solid #D1CFD5;
   width: 95%;
   border-radius: 15px;
+  padding-left: 10px;
 }
 .sideBars {
   width: 12%;
   height: 100vh;
-  border: 1px solid gray;
+  border: 1px solid #D1CFD5;
   margin-left: 0px;
   transition: all 0.2s;
   position: fixed;
@@ -137,7 +140,7 @@
 .sideBarsTwo {
   width: 4%;
   height: 100vh;
-  border: 1px solid gray;
+  border: 1px solid #D1CFD5;
   margin-left: 0px;
   transition: all 0.2s;
   position: fixed;
@@ -165,6 +168,10 @@
 }
 .searchmenu {
   border-left: 0 !important;
+  border-radius: 0 10px 0 10px;
+  top: 0;
+  border-color: #D1CFD5 !important;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .SearchP {
   display: flex;
@@ -197,4 +204,9 @@
 .recentSpan {
   padding: 20px;
   font-size: 18px;
+}
+.bigPostContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
