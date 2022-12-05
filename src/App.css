@@ -14,14 +14,14 @@
   background-color: #fafafa;
 }
 .main {
-  width: 35%;
+  width: 29%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 .suggestYou {
   padding-top: 30px;
-  width: 19%;
+  width: 20%;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -118,6 +118,7 @@
   width: 100%;
   overflow-y: scroll;
   height: 100vh;
+  padding-top: 15px;
 }
 .menuSideIcons {
   width: 100%;
@@ -158,6 +159,7 @@
 .userTwoContainer {
   display: flex;
   gap: 15px;
+  padding-left: 20px;
 }
 .userProfileTwo {
   width: 60px;
@@ -194,7 +196,8 @@
   display: flex;
   width: 100%;
   gap: 5%;
-  padding: 0 20px 0 20px;
+  padding: 0 20px 20px 20px;
+  border-bottom: 1px solid #d1cfd5;
 }
 .searchInput {
   width: 60%;
@@ -219,6 +222,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  transform: translateX(-12px);
 }
 .threeBars {
   display: flex;
@@ -279,4 +283,22 @@
   display: flex;
   font-size: 13px;
   color: rgba(0, 0, 0, 0.388);  
+}
+#damnTextsTwo {
+  display: flex;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.388);  
+}
+.nameININ {
+  font-weight: 500;
+}
+#hoverIt {
+  padding: 20px 0;
+
+}
+#hoverIt:hover {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+#aaac {
+  padding-bottom: 15px;
 }

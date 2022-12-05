@@ -96,7 +96,9 @@ const Sidebars = () => {
                         alt=""
                         style={{ width: "35px", height: "35px" }}
                       />
-                      <strong className="homeIconText">{!expanded && "Home"}</strong>
+                      <strong className="homeIconText">
+                        {!expanded && "Home"}
+                      </strong>
                     </Link>
                   </div>
                   <div onClick={searchHandler} className="menuSideIcons">
@@ -306,8 +308,8 @@ const Sidebars = () => {
               position: "fixed",
               left: "4%",
               border: "1px solid black",
-              opacity: expanded ? '1' : "0",
-              transition: '0.1s',
+              opacity: expanded ? "1" : "0",
+              transition: "0.1s",
               zIndex: 0,
             }}
           >
@@ -321,17 +323,14 @@ const Sidebars = () => {
                   placeholder="Search"
                   aria-label="Search"
                 />
-                <button
-                  className="getButton"
-                  onClick={getData}
-                >
+                <button className="getButton" onClick={getData}>
                   GET
                 </button>
               </div>
-              <div>
-                <strong className="recentSpan">Recent</strong>
-              </div>
               <div className="allUsers">
+                <div id="aaac">
+                  <strong className="recentSpan">Recent</strong>
+                </div>
                 {data &&
                   data.map((el, index) => {
                     return (

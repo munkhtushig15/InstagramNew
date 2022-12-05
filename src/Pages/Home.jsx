@@ -6,10 +6,12 @@ import "../App.css";
 import Loading from "../Components/Loading";
 import { Link } from "react-router-dom";
 import Suggest from "../Components/Suggest";
+// import UserPost from "./UserPost";
 
 const Home = () => {
   const [data, setData] = useState([]);
-  const [post, setPost] = useState([]);
+  // const [post, setPost] = useState([]);
+  const [dataPost, setDataPost] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const instance = axios.create({
     baseURL: "https://dummyjson.com/",
@@ -24,17 +26,25 @@ const Home = () => {
     setData(response.data.users);
     setIsLoading(false);
   };
-  const getPost = async () => {
+  const getDataPost = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/posts");
-    console.log(response.data.posts);
-    setPost(response.data.posts);
+    const response = await instance.get("https://dummyjson.com/users");
+    console.log(response.data.users);
+    setDataPost(response.data.users);
     setIsLoading(false);
   };
+  // const getPost = async () => {
+  //   setIsLoading(true);
+  //   const response = await instance.get("https://dummyjson.com/posts");
+  //   console.log(response.data.posts);
+  //   setPost(response.data.posts);
+  //   setIsLoading(false);
+  // };
 
   useEffect(() => {
     getData();
-    getPost();
+    getDataPost();
+    // getPost();
   }, []);
 
   return (
@@ -51,14 +61,24 @@ const Home = () => {
                 })}
             </div>
             <div className="bigPostContainer">
-              {post &&
+              {/* try new thing */}
+              {dataPost &&
+                dataPost.map((user, index) => {
+                  return (
+                    <div>
+                      <Posts key={index} user={user} />
+                    </div>
+                  );
+                })}
+              {/* end here */}
+              {/* {post &&
                 post.map((post, id) => {
                   return (
                     <div>
                       <Posts key={id} post={post} />
                     </div>
                   );
-                })}
+                })} */}
             </div>
           </div>
           <div className="suggestYou">
@@ -74,7 +94,7 @@ const Home = () => {
                   className="suggestProfile"
                 />
                 <div className="negNeg">
-                  <span>Yundt</span>
+                  <span className="nameININ">Yundt</span>
                   <span className="grayTexts">Mavix</span>
                 </div>
               </div>
@@ -114,11 +134,15 @@ const Home = () => {
                   "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
                 }
                 name="wiecznyx"
-                follower="shroud"
+                follower="munguljingo"
                 number="69"
               />
             </div>
-            <p id="damnTexts">© 2022 INSTAGRAM FROM META</p>
+            <p id="damnTextsTwo">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+              libero!
+            </p>
+            <p id="damnTexts">© 2022 INSTAGRAM FROM PINECONE</p>
           </div>
         </div>
       )}

@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import "./Profile.css";
 import Loading from "../Components/Loading";
+
 const Profile = () => {
   const params = useParams();
   const [data, setData] = useState();
@@ -14,7 +15,6 @@ const Profile = () => {
     setData(response.data);
     setIsLoading(false);
   };
-  
 
   useEffect(() => {
     getDataById(params.id);
@@ -50,7 +50,6 @@ const Profile = () => {
                 <div className="aaab">
                   <span>
                     <strong>{data.age}</strong> posts
-                    
                   </span>
                   <span>
                     <strong>{data.height}K</strong> followers
@@ -67,8 +66,33 @@ const Profile = () => {
             </header>
             <hr />
             <div className="posts">
-              
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
+              <img className="postsImages" src={data.image} alt={data.image} />
             </div>
+            <footer>
+              <span id="damnTextsTwo">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsum libero
+              </span>
+              <span id="damnTexts">© 2022 INSTAGRAM FROM PINECONE</span>
+            </footer>
           </div>
         </div>
       )}

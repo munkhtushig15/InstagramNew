@@ -27,11 +27,12 @@
     "Lucida Sans", Arial, sans-serif;
 }
 .LinkContainer {
-  text-decoration: none;
+  text-decoration: none !important;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: black !important;
 }
 .userContainer {
   padding: 10px;
@@ -99,6 +100,5 @@
   color: #0089B6;
   opacity: 0.5;
 }
-
 
 

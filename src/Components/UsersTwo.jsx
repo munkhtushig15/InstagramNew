@@ -3,7 +3,30 @@ import { Card, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 const UsersTwo = ({ user }) => {
   return (
-    <div>
+    <div id="hoverIt">
+      <Link
+        href="#"
+        style={{ color: "white" }}
+        className="text-decoration-none paddingUm"
+        to={`/${user.id}`}
+      >
+        <div className="userTwoContainer">
+          <img className="userProfileTwo" src={user.image} alt="" />
+          <div className="texts">
+            <span
+              style={{
+                fontFamily: "Rockwell",
+                color: "black ",
+              }}
+            >
+              {user.maidenName}
+            </span>
+            <span className="grayTexts">{user.firstName}</span>
+          </div>
+        </div>
+      </Link>
+
+      {/*       
       <Container>
         <Link
           href="#"
@@ -14,8 +37,7 @@ const UsersTwo = ({ user }) => {
           <Card
             style={{
               width: "120px",
-              backgroundColor: "darkwhite",
-              borderColor: "white",
+              border: 0,
             }}
           >
             <Card.Body>
@@ -39,7 +61,7 @@ const UsersTwo = ({ user }) => {
             </Card.Body>
           </Card>
         </Link>
-      </Container>
+      </Container> */}
     </div>
   );
 };
