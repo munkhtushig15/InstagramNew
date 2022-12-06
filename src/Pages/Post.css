@@ -3,11 +3,12 @@
   padding: 0;
 }
 .postContainer {
-  width: 95%;
+  width: 100%;
   height: fit-content;
   display: flex;
+  justify-content: center;
   flex-direction: column;
-  border: 1px solid #D1CFD5;
+  border: 1px solid #d1cfd5;
   border-radius: 10px;
   background-color: white;
   /* gap: 10px; */
@@ -38,9 +39,9 @@
   padding: 10px;
 }
 .userMaidenName {
-  color: #565A63;
+  color: #565a63;
   font-size: 14px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
 }
 .postIconsContainer {
   width: 97%;
@@ -73,10 +74,10 @@
   width: 97%;
   padding: 0 10px;
 }
-.timeAgo span{
+.timeAgo span {
   font-size: 12px;
-  color: #565A63;
-  font-family: 'Roboto Mono', monospace;
+  color: #565a63;
+  font-family: "Roboto Mono", monospace;
 }
 .comments {
   width: 100%;
@@ -84,7 +85,6 @@
   padding: 0 10px;
   padding-bottom: 10px;
   justify-content: space-between;
-
 }
 .commentLeft {
   display: flex;
@@ -93,12 +93,10 @@
   justify-content: center;
 }
 .postCommentInput {
-  border: 0; 
+  border: 0;
 }
 #postColor {
   font-weight: bold;
-  color: #0089B6;
+  color: #0089b6;
   opacity: 0.5;
 }
-
-

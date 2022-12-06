@@ -65,20 +65,12 @@ const Home = () => {
               {dataPost &&
                 dataPost.map((user, index) => {
                   return (
-                    <div>
+                    <div className="jojo">
                       <Posts key={index} user={user} />
                     </div>
                   );
                 })}
               {/* end here */}
-              {/* {post &&
-                post.map((post, id) => {
-                  return (
-                    <div>
-                      <Posts key={id} post={post} />
-                    </div>
-                  );
-                })} */}
             </div>
           </div>
           <div className="suggestYou">

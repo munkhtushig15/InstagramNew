@@ -18,7 +18,7 @@ const Profile = () => {
 
   useEffect(() => {
     getDataById(params.id);
-  }, []);
+  }, [params.id]);
   return (
     <>
       {isLoading ? (
@@ -89,7 +89,8 @@ const Profile = () => {
             </div>
             <footer>
               <span id="damnTextsTwo">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus ipsum libero
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+                ipsum libero
               </span>
               <span id="damnTexts">© 2022 INSTAGRAM FROM PINECONE</span>
             </footer>

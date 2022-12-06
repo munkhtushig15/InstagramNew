@@ -12,6 +12,7 @@
   padding-top: 30px;
   z-index: 0;
   background-color: #fafafa;
+  gap: 20px;
 }
 .main {
   width: 29%;
@@ -30,9 +31,8 @@
   display: flex;
   overflow-x: scroll;
   border: 1px solid #d1cfd5;
-  width: 95%;
+  width: 100%;
   border-radius: 15px;
-  padding-left: 10px;
   background-color: white;
 }
 .sideBars {
@@ -148,7 +148,7 @@
   align-items: center;
 }
 .sideBarsTwo {
-  width: 4%;
+  width: 3%;
   height: 100vh;
   border: 1px solid #d1cfd5;
   margin-left: 0px;
@@ -222,7 +222,6 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
-  transform: translateX(-12px);
 }
 .threeBars {
   display: flex;
@@ -258,7 +257,7 @@
   align-items: center;
   color: #00bfff;
   font-size: 14px;
-  font-weight:500;
+  font-weight: 500;
   margin: 0;
 }
 #gantshanContainer {
@@ -271,34 +270,107 @@
   font-size: 15px;
   font-weight: 600;
   color: darkgray;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 #seeAll {
   font-size: 14px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   color: #323232cf;
   font-weight: 500;
 }
-#damnTexts  {
+#damnTexts {
   display: flex;
   font-size: 13px;
-  color: rgba(0, 0, 0, 0.388);  
+  color: rgba(0, 0, 0, 0.388);
 }
 #damnTextsTwo {
   display: flex;
   font-size: 12px;
-  color: rgba(0, 0, 0, 0.388);  
+  color: rgba(0, 0, 0, 0.388);
 }
 .nameININ {
   font-weight: 500;
 }
 #hoverIt {
   padding: 20px 0;
-
 }
 #hoverIt:hover {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 #aaac {
   padding-bottom: 15px;
+}
+@media screen and (max-width: 480px) {
+  .sideBars {
+    display: sticky;
+  }
+  .homeIconText {
+    display: none;
+  }
+  .srchIconText {
+    display: none;
+  }
+  .suggestYou {
+    display: none;
+  }
+  .main {
+    width: 90%;
+  }
+  .sideBars {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #d1cfd5;
+    position: fixed;
+    top: 0;
+  }
+  .menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 100%;
+  }
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    width: 80%;
+    gap: 0;
+  }
+  .displayNone {
+    display: none;
+  }
+  .menuSideIcons {
+    width: fit-content;
+  }
+  .bigContainer {
+    padding-left: 0;
+    padding-top: 65px;
+  }
+  .main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10px 0 10px;
+  }
+  .bigPostContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    transform: none;
+  }
+  .Users {
+    width: 100%;
+  }
+  .LinkContainer {
+    width: 100%;
+  }
+  .jojo {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 }

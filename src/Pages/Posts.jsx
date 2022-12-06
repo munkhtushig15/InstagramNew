@@ -4,11 +4,7 @@ import { Link } from "react-router-dom";
 
 const Posts = ({ user }) => {
   return (
-    <Link
-      href="#"
-      className="LinkContainer"
-      to={`/${user.id}`}
-    >
+    <Link href="#" className="LinkContainer" to={`/${user.id}`}>
       <div className="postContainer">
         <div className="userProfileInPosts">
           <img src={user.image} alt="" className="posterProfile" />
@@ -43,7 +39,9 @@ const Posts = ({ user }) => {
             className="sideIcons postIcons"
           />
         </div>
-        <span className="postReactions">{user.height} likes</span>
+        <span className="postReactions">
+          <strong>{user.height}M</strong> likes
+        </span>
         <div className="postComment">
           <span className="posterName">{user.maidenName}</span>
           <span>{user.domain}</span>

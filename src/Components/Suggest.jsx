@@ -1,3 +1,4 @@
+import { Container, Col } from "react-bootstrap";
 import "./Suggest.css";
 const Suggest = ({ image, name, follower, number }) => {
   return (
@@ -5,13 +6,13 @@ const Suggest = ({ image, name, follower, number }) => {
       <div className="div">
         <img id="Image" src={image} alt={image} />
         <div className="texts">
-            <span className="namesIn">{name}</span>
-            <span id="saaralTexts">Followed by {follower} + {number} more</span>
+          <span className="namesIn">{name}</span>
+          <span id="saaralTexts">
+            Followed by {follower} + {number} more
+          </span>
         </div>
       </div>
-      <span id="follow">
-        Follow
-      </span>
+      <span id="follow">Follow</span>
     </div>
   );
 };
