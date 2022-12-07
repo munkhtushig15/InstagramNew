@@ -89,7 +89,7 @@ const Sidebars = () => {
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
                         alt=""
-                        style={{ width: "35px", height: "35px" }}
+                        className="iconsSizes"
                       />
                       <strong className="homeIconText">
                         {!expanded && "Home"}
@@ -100,24 +100,23 @@ const Sidebars = () => {
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/149/149852.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Search"}</div>
                   </div>
                   <div className="menuSideIcons displayNone">
                     <img
-                      className="round50"
                       src="data:image/png;base64,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"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes rounded50"
                     />
-                    <div className="srchIconText">{!expanded && "Explore"}</div>
+                    <div className="srchIconText ">{!expanded && "Explore"}</div>
                   </div>
                   <div className="menuSideIcons displayNone">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/5948/5948543.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Reels"}</div>
                   </div>
@@ -125,7 +124,7 @@ const Sidebars = () => {
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/5948/5948514.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">
                       {!expanded && "Messages"}
@@ -135,7 +134,7 @@ const Sidebars = () => {
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">
                       {!expanded && "Notifications"}
@@ -145,11 +144,11 @@ const Sidebars = () => {
                     <img
                       src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Create"}</div>
                   </div>
-                  <div className="menuSideIcons displayNone">
+                  <div className="menuSideIcons">
                     <Link
                       to="/5"
                       className="text-decoration-none haveLinks"
@@ -213,7 +212,7 @@ const Sidebars = () => {
                       <img
                         src="https://cdn-icons-png.flaticon.com/512/1946/1946436.png"
                         alt=""
-                        style={{ width: "35px", height: "35px" }}
+                        className="iconsSizes"
                       />
                       <div className="homeIconText">{!expanded && "Home"}</div>
                     </Link>
@@ -222,52 +221,51 @@ const Sidebars = () => {
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/149/149852.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Search"}</div>
                   </div>
-                  <div className="menuSideIcons">
+                  <div className="menuSideIcons displayNone">
                     <img
-                      className="round50"
                       src="data:image/png;base64,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"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Explore"}</div>
                   </div>
-                  <div className="menuSideIcons">
+                  <div className="menuSideIcons displayNone">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/5948/5948543.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Reels"}</div>
                   </div>
-                  <div className="menuSideIcons">
+                  <div className="menuSideIcons displayNone">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/5948/5948514.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">
                       {!expanded && "Messages"}
                     </div>
                   </div>
-                  <div className="menuSideIcons">
+                  <div className="menuSideIcons displayNone">
                     <img
                       src="https://cdn-icons-png.flaticon.com/512/1077/1077035.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">
                       {!expanded && "Notifications"}
                     </div>
                   </div>
-                  <div className="menuSideIcons">
+                  <div className="menuSideIcons displayNone">
                     <img
                       src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
                       alt=""
-                      style={{ width: "35px", height: "35px" }}
+                      className="iconsSizes"
                     />
                     <div className="srchIconText">{!expanded && "Create"}</div>
                   </div>
@@ -303,7 +301,8 @@ const Sidebars = () => {
               position: "fixed",
               left: "3%",
               border: "1px solid black",
-              opacity: expanded ? "1" : "0",
+              opacity: expanded ? "1" : "0", 
+              display: expanded ? "block" : "none",
               transition: "0.1s",
               zIndex: 0,
             }}
