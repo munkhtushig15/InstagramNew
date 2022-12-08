@@ -123,8 +123,8 @@ const Home = () => {
               />
             </div>
             <p id="damnTextsTwo">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
-              libero!
+              About·Help·Press·API·Jobs·Privacy·Terms·Locations·Language·
+              English
             </p>
             <p id="damnTexts">© 2022 INSTAGRAM FROM PINECONE</p>
           </div>
