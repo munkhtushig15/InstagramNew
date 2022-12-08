@@ -23,9 +23,11 @@ const Sidebars = () => {
     console.log(response.data.users);
     setData(response.data.users);
     setIsLoading(false);
+    setExpanded(false);
   };
   useEffect(() => {
     getData();
+    setExpanded(false);
   }, []);
 
   const searchHandler = () => {
@@ -110,7 +112,9 @@ const Sidebars = () => {
                       alt=""
                       className="iconsSizes rounded50"
                     />
-                    <div className="srchIconText ">{!expanded && "Explore"}</div>
+                    <div className="srchIconText ">
+                      {!expanded && "Explore"}
+                    </div>
                   </div>
                   <div className="menuSideIcons displayNone">
                     <img
@@ -301,7 +305,7 @@ const Sidebars = () => {
               position: "fixed",
               left: "3%",
               border: "1px solid black",
-              opacity: expanded ? "1" : "0", 
+              opacity: expanded ? "1" : "0",
               display: expanded ? "block" : "none",
               transition: "0.1s",
               zIndex: 0,
