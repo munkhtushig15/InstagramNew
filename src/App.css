@@ -2,7 +2,49 @@
   margin: 0;
   padding: 0;
 }
+.more {
+  width: 80%;
+  padding: 5px 10px 5px 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.nnn {
+  border: 0;
+}
+.menuLink {
+  text-decoration: none;
+}
+.menuHiive {
+  width: fit-content;
+  height: fit-content;
+  background-color: gainsboro;
+  position: fixed;
+  z-index: 3;
+  left: 1%;
+  bottom: 8%;
+  border-radius: 10px;
 
+}
+.moreTwo {
+  width: 80%;
+  padding: 5px 10px 5px 10px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+
+}
+.menusTwo {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  align-items: center;
+}
 .bigContainer {
   display: flex;
   width: 100vw;
@@ -55,6 +97,7 @@
   flex-direction: column;
   height: 100vh;
   align-items: center;
+  justify-content: space-between;
 }
 .SearchP {
   margin-top: 10px;
