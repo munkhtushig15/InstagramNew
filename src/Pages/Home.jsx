@@ -33,18 +33,10 @@ const Home = () => {
     setDataPost(response.data.users);
     setIsLoading(false);
   };
-  // const getPost = async () => {
-  //   setIsLoading(true);
-  //   const response = await instance.get("https://dummyjson.com/posts");
-  //   console.log(response.data.posts);
-  //   setPost(response.data.posts);
-  //   setIsLoading(false);
-  // };
 
   useEffect(() => {
     getData();
     getDataPost();
-    // getPost();
   }, []);
 
   return (
