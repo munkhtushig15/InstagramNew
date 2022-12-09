@@ -26,7 +26,7 @@ const Settings = () => {
           <div className="profileContainer">
             <div className="mainContainer">
               <header>
-                <div className="partOne">fk</div>
+                <div className="partOne">Settings</div>
                 <div className="partTwo">
                   <div className="aaaa">
                     <button>Following</button>

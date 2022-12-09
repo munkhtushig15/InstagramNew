@@ -1,9 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-}
 .more {
-  width: 80%;
+  width: 90%;
   padding: 5px 10px 5px 10px;
   gap: 10px;
   display: flex;
@@ -13,23 +9,25 @@
 }
 .nnn {
   border: 0;
+  border-radius: 10px;
 }
 .menuLink {
   text-decoration: none;
 }
 .menuHiive {
-  width: fit-content;
-  height: fit-content;
-  background-color: gainsboro;
-  position: fixed;
+  padding: 15px 10px;
+  background-color: rgba(220, 220, 220, 0.64);
   z-index: 3;
-  left: 1%;
-  bottom: 8%;
   border-radius: 10px;
-
+  position: fixed;
+  bottom: 4vw;
+  left: 2vw;
+}
+.nnn:hover {
+  background-color: gainsboro;
 }
 .moreTwo {
-  width: 80%;
+  width: 90%;
   padding: 5px 10px 5px 10px;
   gap: 10px;
   display: flex;
@@ -37,7 +35,10 @@
   justify-content: center;
   cursor: pointer;
   margin-bottom: 20px;
-
+}
+.aaad {
+  display: flex;
+  flex-direction: column;
 }
 .menusTwo {
   display: flex;
@@ -180,8 +181,8 @@
   border-radius: 50%;
 }
 .iconProfile {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
   border: 1px solid black;
   border-radius: 50%;
 }
@@ -298,8 +299,8 @@
   align-items: center;
 }
 .iconsSizes {
-  width: 35px;
-  height: 35px;
+  width: 25px;
+  height: 25px;
 }
 .rounded50 {
   border-radius: 50%;
@@ -446,5 +447,15 @@
     justify-content: space-between;
     z-index: 2 !important;
     background-color: white;
+  }
+  .more {
+    width: fit-content;
+    margin: 0;
+  }
+  .menusTwo {
+    flex-direction: row;
+  }
+  .aaad {
+    flex-direction: row;
   }
 }
