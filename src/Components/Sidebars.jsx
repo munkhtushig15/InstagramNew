@@ -3,7 +3,7 @@ import "../App.css";
 import axios from "axios";
 import Loading from "./Loading";
 import { Link } from "react-router-dom";
-import UsersTwo from "../Components/UsersTwo";
+import UsersTwo from "../Components/UsersTwo"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FaBars } from "react-icons/fa";
 
@@ -15,16 +15,16 @@ const Sidebars = () => {
   const [expandedTwo, setExpandedTwo] = useState(false);
 
   const instance = axios.create({
-    baseURL: "https://dummyjson.com/",
+    baseURL: "http://localhost:8000/",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
   const getData = async () => {
     setIsLoading(true);
-    const response = await instance.get(`https://dummyjson.com/users/`);
+    const response = await instance.get(`/users`);
     console.log(response.data.users);
-    setData(response.data.users);
+    setData(response.data.data);
     setIsLoading(false);
     setExpanded(false);
   };
@@ -311,6 +311,9 @@ const Sidebars = () => {
                           {!expanded && "Notifications"}
                         </div>
                       </div>
+
+                      <Link
+                      >
                       <div className="menuSideIcons displayNone">
                         <img
                           src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
@@ -321,6 +324,10 @@ const Sidebars = () => {
                           {!expanded && "Create"}
                         </div>
                       </div>
+                      </Link>
+
+
+
                       <div className="menuSideIcons">
                         <Link
                           to="/5"
@@ -383,10 +390,10 @@ const Sidebars = () => {
                     <strong className="recentSpan">Recent</strong>
                   </div>
                   {data &&
-                    data.map((el, index) => {
+                    data.map((user, index) => {
                       return (
-                        el.maidenName.includes(value) && (
-                          <UsersTwo key={index} user={el} />
+                        user.firstname.includes(value) && (
+                          <UsersTwo key={index} user={user} />
                         )
                       );
                     })}

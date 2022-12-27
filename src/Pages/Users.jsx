@@ -9,10 +9,10 @@ const Users = ({ user }) => {
         href="#"
         style={{ color: "white" }}
         className="LinkContainer"
-        to={`/${user.id}`}
+        to={`/${user._id}`}
       >
         <img className="userProfile" src={user.image} alt="" />
-        <span className="userMaidenName">{user.maidenName}</span>
+        <span className="userMaidenName">{user.firstname}</span>
       </Link>
     </div>
   );

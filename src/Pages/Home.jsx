@@ -14,23 +14,23 @@ const Home = () => {
   const [dataPost, setDataPost] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const instance = axios.create({
-    baseURL: "https://dummyjson.com/",
+    baseURL: "http://localhost:8000/",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
   const getData = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/users");
-    console.log(response.data.users);
-    setData(response.data.users);
+    const response = await instance.get("/users");
+    console.log(response.data.data);
+    setData(response.data.data);
     setIsLoading(false);
   };
   const getDataPost = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/users");
+    const response = await instance.get("/posts");
     console.log(response.data.users);
-    setDataPost(response.data.users);
+    setDataPost(response.data.Post);
     setIsLoading(false);
   };
 
@@ -49,7 +49,7 @@ const Home = () => {
             <div className="Users">
               {data &&
                 data.map((user, index) => {
-                  return <Users key={index} user={user} />;
+                  return <Users key={user._id} user={user} />;
                 })}
             </div>
             <div className="bigPostContainer">
@@ -89,30 +89,6 @@ const Home = () => {
               <span id="seeAll">See All</span>
             </div>
             <div className="suggestCONTAINS">
-              <Suggest
-                image={"https://robohash.org/perferendisideveniet.png"}
-                name="Abshire"
-                follower="Smitham"
-                number="10"
-              />
-              <Suggest
-                image={"https://robohash.org/amettemporeea.png"}
-                name="Koepp"
-                follower="Smitham"
-                number="5"
-              />
-              <Suggest
-                image={"https://robohash.org/consequunturabnon.png"}
-                name="xisherwoodr"
-                follower="Smitham"
-                number="13"
-              />
-              <Suggest
-                image={"https://robohash.org/nequeodiosapiente.png"}
-                name="Wuckert"
-                follower="Smitham"
-                number="1"
-              />
               <Suggest
                 image={
                   "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"

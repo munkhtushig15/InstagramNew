@@ -7,10 +7,12 @@ import Sidebars from "./Components/Sidebars";
 import Settings from "./Pages/Settings";
 import LogOut from "./Pages/LogOut";
 const App = () => {
+  
   return (
     <BrowserRouter style={{ margin: 0 }}>
       <Sidebars />
       <Routes>
+        <Route /> 
         <Route path="/LogOut" element={<LogOut />} />
         <Route path="/Settings" element={<Settings />} />
         <Route path="/:id" element={<Profile />} />

@@ -8,7 +8,7 @@ const UsersTwo = ({ user }) => {
         href="#"
         style={{ color: "white" }}
         className="text-decoration-none paddingUm"
-        to={`/${user.id}`}
+        to={`/${user._id}`}
       >
         <div className="userTwoContainer">
           <img className="userProfileTwo" src={user.image} alt="" />
@@ -19,9 +19,9 @@ const UsersTwo = ({ user }) => {
                 color: "black ",
               }}
             >
-              {user.maidenName}
+              {user.firstname}
             </span>
-            <span className="grayTexts">{user.firstName}</span>
+            <span className="grayTexts">{user.lastname}</span>
           </div>
         </div>
       </Link>

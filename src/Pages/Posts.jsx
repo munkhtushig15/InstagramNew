@@ -8,10 +8,10 @@ const Posts = ({ user }) => {
       <div className="postContainer">
         <div className="userProfileInPosts">
           <img src={user.image} alt="" className="posterProfile" />
-          <span className="posterName">{user.maidenName}</span>
+          <span className="posterName">{user.name}</span>
         </div>
         <img
-          src="https://pbs.twimg.com/media/EUj1VojXQAEL9Og.jpg"
+          src={user.bgimage}
           alt=""
           className="postPicture"
         />
@@ -40,10 +40,10 @@ const Posts = ({ user }) => {
           />
         </div>
         <span className="postReactions">
-          <strong>{user.height}M</strong> likes
+          <strong>{user.likes}</strong> likes
         </span>
         <div className="postComment">
-          <span className="posterName">{user.maidenName}</span>
+          <span className="posterName">{user.firstname}</span>
           <span>{user.domain}</span>
         </div>
         <div className="timeAgo">
