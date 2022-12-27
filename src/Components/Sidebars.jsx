@@ -15,16 +15,16 @@ const Sidebars = () => {
   const [expandedTwo, setExpandedTwo] = useState(false);
 
   const instance = axios.create({
-    baseURL: "https://dummyjson.com/",
+    baseURL: "http://localhost:8000",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
   const getData = async () => {
     setIsLoading(true);
-    const response = await instance.get(`https://dummyjson.com/users/`);
-    console.log(response.data.users);
-    setData(response.data.users);
+    const response = await instance.get(`/posts`);
+    console.log(response.data.data);
+    setData(response.data.data);
     setIsLoading(false);
     setExpanded(false);
   };
@@ -166,19 +166,26 @@ const Sidebars = () => {
                             {!expanded && "Notifications"}
                           </div>
                         </div>
-                        <div className="menuSideIcons displayNone">
-                          <img
-                            src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
-                            alt=""
-                            className="iconsSizes"
-                          />
-                          <div className="srchIconText">
-                            {!expanded && "Create"}
+                        <Link
+                          to="/create"
+                          href="#"
+                          style={{ color: "black", display: "flex" }}
+                          className="text-decoration-none haveLinks"
+                        >
+                          <div className="menuSideIcons displayNone">
+                            <img
+                              src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
+                              alt=""
+                              className="iconsSizes"
+                            />
+                            <div className="srchIconText">
+                              {!expanded && "Create"}
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                         <div className="menuSideIcons">
                           <Link
-                            to="/5"
+                            to="/63aab3c222d36bf0722bb398"
                             className="text-decoration-none haveLinks"
                             style={{ display: "flex", color: "black" }}
                           >
@@ -311,19 +318,26 @@ const Sidebars = () => {
                           {!expanded && "Notifications"}
                         </div>
                       </div>
-                      <div className="menuSideIcons displayNone">
-                        <img
-                          src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
-                          alt=""
-                          className="iconsSizes"
-                        />
-                        <div className="srchIconText">
-                          {!expanded && "Create"}
+                      <Link
+                        to="/create"
+                        href="#"
+                        style={{ color: "black", display: "flex" }}
+                        className="text-decoration-none haveLinks"
+                      >
+                        <div className="menuSideIcons displayNone">
+                          <img
+                            src="https://cdn-icons-png.flaticon.com/128/3388/3388934.png"
+                            alt=""
+                            className="iconsSizes"
+                          />
+                          <div className="srchIconText">
+                            {!expanded && "Create"}
+                          </div>
                         </div>
-                      </div>
+                      </Link>
                       <div className="menuSideIcons">
                         <Link
-                          to="/5"
+                          to="/63aab3c222d36bf0722bb398"
                           className="text-decoration-none haveLinks"
                           style={{ display: "flex", color: "black" }}
                         >
@@ -383,10 +397,10 @@ const Sidebars = () => {
                     <strong className="recentSpan">Recent</strong>
                   </div>
                   {data &&
-                    data.map((el, index) => {
+                    data.map((post, index) => {
                       return (
-                        el.maidenName.includes(value) && (
-                          <UsersTwo key={index} user={el} />
+                        post.username.includes(value) && (
+                          <UsersTwo key={index} post={post} />
                         )
                       );
                     })}
@@ -411,8 +425,8 @@ const Sidebars = () => {
           </div>
           <hr />
           <div className="loveNeg">
-            <Link to="/LogOut" className="menuLink">
-              Log Out
+            <Link to="/logout" className="menuLink">
+              logout
             </Link>
           </div>
         </div>

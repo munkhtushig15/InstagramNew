@@ -2,19 +2,15 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./Post.css";
 import { Link } from "react-router-dom";
 
-const Posts = ({ user }) => {
+const Posts = ({ post }) => {
   return (
-    <Link href="#" className="LinkContainer" to={`/${user.id}`}>
+    <Link href="#" className="LinkContainer" to={`/${post._id}`}>
       <div className="postContainer">
         <div className="userProfileInPosts">
-          <img src={user.image} alt="" className="posterProfile" />
-          <span className="posterName">{user.maidenName}</span>
+          <img src={post.image} alt="" className="posterProfile" />
+          <span className="posterName">{post.username}</span>
         </div>
-        <img
-          src="https://pbs.twimg.com/media/EUj1VojXQAEL9Og.jpg"
-          alt=""
-          className="postPicture"
-        />
+        <img src={post.imageTwo} alt="" className="postPicture" />
         <div className="postIconsContainer">
           <div className="sideIcons">
             <img
@@ -40,14 +36,15 @@ const Posts = ({ user }) => {
           />
         </div>
         <span className="postReactions">
-          <strong>{user.height}M</strong> likes
+          <strong>{post.postedSince}M</strong> likes
         </span>
         <div className="postComment">
-          <span className="posterName">{user.maidenName}</span>
-          <span>{user.domain}</span>
+          <span className="posterName">
+            <strong>{post.username}</strong>-{post.description}
+          </span>
         </div>
         <div className="timeAgo">
-          <span>{user.age}</span>
+          <span>{post._id}</span>
           <span>MINUTES AGO</span>
         </div>
         <hr />

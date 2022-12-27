@@ -14,23 +14,23 @@ const Home = () => {
   const [dataPost, setDataPost] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const instance = axios.create({
-    baseURL: "https://dummyjson.com/",
+    baseURL: "http://localhost:8000",
     headers: {
       "Content-type": "application/json; charset=UTF-8",
     },
   });
   const getData = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/users");
-    console.log(response.data.users);
-    setData(response.data.users);
+    const response = await instance.get("/posts");
+    console.log(response.data.data);
+    setData(response.data.data);
     setIsLoading(false);
   };
   const getDataPost = async () => {
     setIsLoading(true);
-    const response = await instance.get("https://dummyjson.com/users");
-    console.log(response.data.users);
-    setDataPost(response.data.users);
+    const response = await instance.get("/posts");
+    console.log(response.data.data);
+    setDataPost(response.data.data);
     setIsLoading(false);
   };
 
@@ -48,17 +48,17 @@ const Home = () => {
           <div className="main">
             <div className="Users">
               {data &&
-                data.map((user, index) => {
-                  return <Users key={index} user={user} />;
+                data.map((post, index) => {
+                  return <Users key={index} post={post} />;
                 })}
             </div>
             <div className="bigPostContainer">
               {/* try new thing */}
               {dataPost &&
-                dataPost.map((user, index) => {
+                dataPost.map((post, index) => {
                   return (
                     <div className="jojo">
-                      <Posts key={index} user={user} />
+                      <Posts key={index} post={post} />
                     </div>
                   );
                 })}

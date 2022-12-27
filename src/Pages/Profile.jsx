@@ -11,8 +11,8 @@ const Profile = () => {
   const [isLoading, setIsLoading] = useState(true);
   const getDataById = async (id) => {
     setIsLoading(true);
-    const response = await axios.get(`https://dummyjson.com/users/${id}`);
-    setData(response.data);
+    const response = await axios.get(`http://localhost:8000/posts/${id}`);
+    setData(response.data.data);
     setIsLoading(false);
   };
 
@@ -36,7 +36,7 @@ const Profile = () => {
               </div>
               <div className="partTwo">
                 <div className="aaaa">
-                  <span>{data.maidenName}</span>
+                  <span>{data.username}</span>
                   <button>Following</button>
                   <button>Message</button>
                   <button>
@@ -49,18 +49,18 @@ const Profile = () => {
                 </div>
                 <div className="aaab">
                   <span>
-                    <strong>{data.age}</strong> posts
+                    <strong>{data.postedSince}</strong> posts
                   </span>
                   <span>
-                    <strong>{data.height}K</strong> followers
+                    <strong>{data.postedSince}K</strong> followers
                   </span>
                   <span>
-                    <strong>{data.weight}K</strong> following
+                    <strong>{data.postedSince}K</strong> following
                   </span>
                 </div>
                 <div>
-                  <span>{data.firstName}</span>
-                  <span>{data.email}</span>
+                  <span>{data.username}</span>
+                  <span>{data.title}</span>
                 </div>
               </div>
             </header>

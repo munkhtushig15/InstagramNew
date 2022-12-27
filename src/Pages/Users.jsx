@@ -2,17 +2,17 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Link } from "react-router-dom";
 import "../App.css";
 
-const Users = ({ user }) => {
+const Users = ({ post }) => {
   return (
     <div className="userContainer">
       <Link
         href="#"
         style={{ color: "white" }}
         className="LinkContainer"
-        to={`/${user.id}`}
+        to={`/${post._id}`}
       >
-        <img className="userProfile" src={user.image} alt="" />
-        <span className="userMaidenName">{user.maidenName}</span>
+        <img className="userProfile" src={post.image} alt="" />
+        <span className="userMaidenName">{post.username}</span>
       </Link>
     </div>
   );

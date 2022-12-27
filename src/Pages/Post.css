@@ -21,11 +21,6 @@
   border: 3px solid transparent;
   margin: 10px;
 }
-.posterName {
-  font-weight: 600;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
 .LinkContainer {
   text-decoration: none !important;
   display: flex;
