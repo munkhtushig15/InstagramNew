@@ -1,9 +1,7 @@
 const Logout = () => {
   return (
     <>
-      <div className="createPostCss">
-        hi
-      </div>
+      <div className="createPostCss">hi</div>
     </>
   );
 };

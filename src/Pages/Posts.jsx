@@ -11,6 +11,7 @@ const Posts = ({ post }) => {
     },
   });
   return (
+// <<<<<<< HEAD
     <div className="postContainer">
       <div className="userProfileInPosts">
         <div>
@@ -51,11 +52,11 @@ const Posts = ({ post }) => {
       </span>
       <div className="postComment">
         <span className="posterName">
-          <strong>{post.username}</strong>-{post.description}
+          <strong>{post.username}</strong>&nbsp;&nbsp;{post.description}
         </span>
       </div>
       <div className="timeAgo">
-        <span>{post._id}</span>
+        <span>{post.postedSince}</span>
         <span>MINUTES AGO</span>
       </div>
       <hr />

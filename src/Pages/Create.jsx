@@ -7,6 +7,7 @@ const Create = () => {
   const [username, setUsername] = useState([]);
   const [title, setTitle] = useState([]);
   const [desc, setDesc] = useState([]);
+  const [imageBG, setImageBG] = useState([]);
   const instance = axios.create({
     baseURL: "http://localhost:8000",
     headers: {
@@ -18,6 +19,7 @@ const Create = () => {
       username: username,
       title: title,
       description: desc,
+      imageTwo: imageBG,
     });
     console.log(response);
   };
@@ -49,6 +51,10 @@ const Create = () => {
           <input
             placeholder="Description:"
             onChange={(e) => setDesc(e.target.value)}
+          />
+          <input
+            placeholder="BGImage:"
+            onChange={(e) => setImageBG(e.target.value)}
           />
         </div>
         <button onClick={Post}>POST</button>

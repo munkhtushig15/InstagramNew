@@ -48,6 +48,7 @@ const Home = () => {
           <div className="main">
             <div className="Users">
               {data &&
+// <<<<<<< HEAD
                 data.map((post, index) => {
                   return <Users key={index} post={post} />;
                 })}
@@ -89,30 +90,6 @@ const Home = () => {
               <span id="seeAll">See All</span>
             </div>
             <div className="suggestCONTAINS">
-              <Suggest
-                image={"https://robohash.org/perferendisideveniet.png"}
-                name="Abshire"
-                follower="Smitham"
-                number="10"
-              />
-              <Suggest
-                image={"https://robohash.org/amettemporeea.png"}
-                name="Koepp"
-                follower="Smitham"
-                number="5"
-              />
-              <Suggest
-                image={"https://robohash.org/consequunturabnon.png"}
-                name="xisherwoodr"
-                follower="Smitham"
-                number="13"
-              />
-              <Suggest
-                image={"https://robohash.org/nequeodiosapiente.png"}
-                name="Wuckert"
-                follower="Smitham"
-                number="1"
-              />
               <Suggest
                 image={
                   "https://i.natgeofe.com/n/548467d8-c5f1-4551-9f58-6817a8d2c45e/NationalGeographic_2572187_square.jpg"
