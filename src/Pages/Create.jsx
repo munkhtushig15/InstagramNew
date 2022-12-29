@@ -1,10 +1,12 @@
 import "./CreatePost.css";
 import axios from "axios";
 import { useState } from "react";
-import { useParams } from "react-router-dom";
+import "./Create.css";
 
 const Create = () => {
-  const [value, setValue] = useState([]);
+  const [username, setUsername] = useState([]);
+  const [title, setTitle] = useState([]);
+  const [desc, setDesc] = useState([]);
   const instance = axios.create({
     baseURL: "http://localhost:8000",
     headers: {
@@ -13,30 +15,44 @@ const Create = () => {
   });
   const Post = async () => {
     const response = await instance.post("/posts", {
-      username: value,
+      username: username,
+      title: title,
+      description: desc,
     });
     console.log(response);
   };
-  const Dlt = async () => {
-    const response = await instance.delete("/posts", {
-        
-    });
+  // const Dlt = async () => {
+  //   const response = await instance.delete("/posts", {});
 
-    console.log(response);
-  };
+  //   console.log(response);
+  // };
   return (
-    <div>
-      <center>
-        <input onChange={(e) => setValue(e.target.value)} />
-
-        <button style={{ width: 200, height: 40 }} onClick={Post}>
+    <div className="bigBack">
+      <div className="createHiihHeseg">
+        {/* <input placeholder="Name" onChange={(e) => setValue(e.target.value)} />
+        <button onClick={Post}>
           CREATE
         </button>
-        <input onChange={(e) => setValue(e.target.value)} />
-        <button style={{ width: 200, height: 40 }} onClick={Dlt}>
+        <input placeholder="Id" onChange={(e) => setValue(e.target.value)} />
+        <button onClick={Dlt}>
           DELETE
-        </button>
-      </center>
+        </button> */}
+        <div className="box">
+          <input
+            placeholder="Username:"
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <input
+            placeholder="Title:"
+            onChange={(e) => setTitle(e.target.value)}
+          />
+          <input
+            placeholder="Description:"
+            onChange={(e) => setDesc(e.target.value)}
+          />
+        </div>
+        <button onClick={Post}>POST</button>
+      </div>
     </div>
   );
 };

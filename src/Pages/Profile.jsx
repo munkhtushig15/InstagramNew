@@ -84,8 +84,6 @@ const Profile = () => {
               <img className="postsImages" src={data.image} alt={data.image} />
               <img className="postsImages" src={data.image} alt={data.image} />
               <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
             </div>
             <footer>
               <span id="damnTextsTwo">
