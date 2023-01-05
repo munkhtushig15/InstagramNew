@@ -1,17 +1,15 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Post.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
+
+
 
 const Posts = ({ post }) => {
-  const instance = axios.create({
-    baseURL: "http://localhost:8000",
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  });
+  function generateRandomInteger() {
+    return Math.floor(Math.random() * 99) + 1;
+  }  
+  let test = new Date();
   return (
-// <<<<<<< HEAD
     <div className="postContainer">
       <div className="userProfileInPosts">
         <div>
@@ -48,7 +46,7 @@ const Posts = ({ post }) => {
         </div>
       </Link>
       <span className="postReactions">
-        <strong>{post.postedSince}M</strong> likes
+        <strong>{generateRandomInteger}</strong> likes
       </span>
       <div className="postComment">
         <span className="posterName">
@@ -56,7 +54,7 @@ const Posts = ({ post }) => {
         </span>
       </div>
       <div className="timeAgo">
-        <span>{post.postedSince}</span>
+        <span>{test}</span>
         <span>MINUTES AGO</span>
       </div>
       <hr />

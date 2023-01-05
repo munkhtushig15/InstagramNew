@@ -17,14 +17,14 @@ const Profile = () => {
   });
   const getDataById = async () => {
     setIsLoading(true);
-    const response = await instance.get(`/posts/${params._id}`);
+    const response = await instance.get(`/posts/${params.id}`);
     setData(response.data.data);
     setIsLoading(false);
   };
 
   useEffect(() => {
-    getDataById(params._id);
-  }, [params._id]);
+    getDataById(params.id);
+  }, [params.id]);
   return (
     <>
       {isLoading ? (
@@ -72,22 +72,7 @@ const Profile = () => {
             </header>
             <hr />
             <div className="posts">
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
-              <img className="postsImages" src={data.image} alt={data.image} />
+              
             </div>
             <footer>
               <span id="damnTextsTwo">
