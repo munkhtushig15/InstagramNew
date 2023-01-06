@@ -1,14 +1,20 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Post.css";
 import { Link } from "react-router-dom";
-
-
+import axios from "axios";
 
 const Posts = ({ post }) => {
-  function generateRandomInteger() {
-    return Math.floor(Math.random() * 99) + 1;
-  }  
-  let test = new Date();
+  const instance = axios.create({
+    baseURL: "http://localhost:8000",
+    headers: {
+      "Content-type": "application/json; charset=UTF-8",
+    },
+  });
+  const deleteHandler = async () => {
+    const res = await instance.delete(`/posts/${post._id}`);
+    console.log(res)
+  };
+
   return (
     <div className="postContainer">
       <div className="userProfileInPosts">
@@ -16,7 +22,7 @@ const Posts = ({ post }) => {
           <img src={post.image} alt="" className="posterProfile" />
           <span className="posterName">{post.username}</span>
         </div>
-        <button className="btntn">delete</button>
+        <button onClick={deleteHandler} className="btntn">delete</button>
       </div>
       <Link href="#" className="LinkContainer" to={`/${post._id}`}>
         <img src={post.imageTwo} alt="" className="postPicture" />
@@ -46,7 +52,7 @@ const Posts = ({ post }) => {
         </div>
       </Link>
       <span className="postReactions">
-        <strong>{generateRandomInteger}</strong> likes
+        <strong>189k</strong> likes
       </span>
       <div className="postComment">
         <span className="posterName">
@@ -54,7 +60,7 @@ const Posts = ({ post }) => {
         </span>
       </div>
       <div className="timeAgo">
-        <span>{test}</span>
+        <span>17</span>
         <span>MINUTES AGO</span>
       </div>
       <hr />

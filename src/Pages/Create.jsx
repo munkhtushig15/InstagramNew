@@ -2,6 +2,8 @@ import axios from "axios";
 import { useState } from "react";
 import "./Create.css";
 import "./CreatePost.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Create = () => {
   const [username, setUsername] = useState("");
@@ -16,14 +18,19 @@ const Create = () => {
     },
   });
   const Post = async () => {
-    const response = await instance.post("/posts", {
-      username: username,
-      description: desc,
-      imageTwo: imageBG,
-      image: image,
-      date: date,
-    });
-    console.log(response);
+    try {
+      const response = await instance.post("/posts", {
+        username: username,
+        description: desc,
+        imageTwo: imageBG,
+        image: image,
+        date: date,
+      });
+      console.log(response);
+      toast("Post created successfully");
+    } catch (error) {
+      toast(error.response.data.data);
+    }
   };
   return (
     <div className="bigBack">
@@ -37,7 +44,7 @@ const Create = () => {
             placeholder="Image:"
             onChange={(e) => setImage(e.target.value)}
           />
-          {image ? ( 
+          {image ? (
             <img src={image} alt="zurag aa zurag" className="image" />
           ) : null}
           <input
@@ -51,10 +58,15 @@ const Create = () => {
           {imageBG ? (
             <img src={imageBG} alt="imageBG" className="image" />
           ) : null}
-          <input type="date" placeholder="Born:" onChange={(e) => setDate(e.target.value)}/>
+          <input
+            type="date"
+            placeholder="Born:"
+            onChange={(e) => setDate(e.target.value)}
+          />
         </div>
         <button onClick={Post}>POST</button>
       </div>
+      <ToastContainer />
     </div>
   );
 };
